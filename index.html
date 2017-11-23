@@ -27,7 +27,7 @@
       </a-entity>
 
       <a-entity
-        light="type: ambient; color: #CCC; intensity: 0.4">
+        light="type: ambient; color: #CCC; intensity: 0.0">
       </a-entity>
 
       <!-- floor -->
@@ -125,9 +125,9 @@
           </a-entity>
 
           <a-entity position="0 -0.3 0">
-            <a-entity position="0 0 0" text="color:black;value:A gallery by: Diogo Rodrigues;width:0.9;align:right;"></a-entity>
-            <a-entity position="0 -0.1 0" text="color:black;value:Illustrations by: Stefano Scalella;width:0.9;align:right;"></a-entity>
-            <a-entity position="0 -0.2 0" text="color:black;value:3D models by: Evyatar Amitay;width:0.9;align:right;">
+            <a-entity position="0 0 0" text="color:white;value:A gallery by: Diogo Rodrigues;width:0.9;align:right;"></a-entity>
+            <a-entity position="0 -0.1 0" text="color:white;value:Illustrations by: Stefano Scalella;width:0.9;align:right;"></a-entity>
+            <a-entity position="0 -0.2 0" text="color:white;value:3D models by: Evyatar Amitay;width:0.9;align:right;">
             </a-entity>
           </a-entity>
         </a-entity>
@@ -146,7 +146,7 @@
           scale="0.6 1 0.6"
           shadow="receive: true">
           <a-entity
-            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot; castShadow:true;"
+            light="shadowCameraFar:0.86;shadowCameraTop:5.03;shadowCameraNear:2.22;intensity:2.23;distance:6;penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot;castShadow:true"
             rotation="-55 0 0"
             position="-0.355 0.596 0.117">
           </a-entity>
@@ -162,13 +162,13 @@
         <a-obj-model
           src="#lamp-obj"
           mtl="#lamp-mtl"
-          position="-5.5 2.138 0.1"
+          position="-4.2 2.138 0.1"
           material=""
           rotation="0 180 0"
           scale="0.6 1 0.6"
           shadow="receive: true">
           <a-entity
-            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot; castShadow:true;"
+            light="decay:2.54;penumbra:0.45;intensity:4.95;distance:5.77;angle:70;shadowMapWidth:1024;shadowMapHeight:1024;shadowCameraTop:6.71;shadowBias:-0.07;castShadow:true;shadowCameraNear:1.57;shadowCameraFar:500.06;groundColor:#fbfbfb;color:#fff987;type:spot"
             rotation="-55 0 0"
             position="-0.355 0.596 0.117">
           </a-entity>
@@ -192,7 +192,7 @@
         </a-obj-model>
       </a-entity>
 
-      <a-sky color="#222"></a-sky>
+      <a-sky color="black"></a-sky>
     </a-scene>
   </body>
 </html>
