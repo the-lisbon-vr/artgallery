@@ -13,6 +13,7 @@
         <img id="cement" src="images/cement.jpg">
         <img id="cement02" src="images/cement02.jpg">
         <img id="asphalt" src="images/asphalt.jpg">
+        <img id="light-bulb" src="images/light-bulb.jpg">
         <img id="author-pic" src="images/author-pic-p.png">
         <img id="insta-laundry" src="images/insta-laundry.jpg">
         <img id="mask" src="images/mask.jpg">
@@ -33,14 +34,16 @@
       <a-entity
         geometry="primitive: plane; width: 36.92; height:24.62"
         rotation="-90 0 0"
-        material="src: #asphalt; repeat: 10 10">
+        material="src: #asphalt; repeat: 10 10; roughness: 1; metalness: 0"
+        shadow="receive: true">
       </a-entity>
 
       <!-- side walk -->
       <a-entity
         geometry="depth:10;height:10;width:10"
         position="-6.518 -4.933 1.084"
-        material="src: #cement02; repeat: 10 10">
+        material="src: #cement02; repeat: 10 10; roughness: 1; metalness: 0"
+        shadow="receive: true">
       </a-entity>
 
       <!-- wall01 -->
@@ -50,10 +53,11 @@
         width="4"
         height="4"
         color="#7BC8A4"
-        scale="3.08 1.91 1">
+        scale="3.08 1.91 1"
+        shadow="receive: true">
         <a-entity
           geometry="primitive: plane; width: 2.16; height:1"
-          material="src: #cement;">
+          material="src: #cement; roughness: 1; metalness: 0">
         </a-entity>
       </a-entity>
 
@@ -63,11 +67,12 @@
         rotation="0 90 0"
         width="4"
         height="4"
-        color="#7BC8A4"
         scale="3.08 1.91 1">
         <a-entity
-          geometry="primitive: plane; width: 2.16; height:1"
-          material="src: #cement;">
+          geometry="primitive: box; width: 2.16; height: 1, depth: 1"
+          material="src: #cement; roughness: 1; metalness: 0"
+          position="0 0 -0.516"
+          shadow="receive: true">
         </a-entity>
       </a-entity>
 
@@ -138,12 +143,19 @@
           position="0.5 2.138 0.1"
           material=""
           rotation="0 180 0"
-          scale="0.6 1 0.6">
+          scale="0.6 1 0.6"
+          shadow="receive: true">
           <a-entity
-            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot"
+            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot; castShadow:true;"
             rotation="-55 0 0"
             position="-0.355 0.596 0.117">
           </a-entity>
+          <a-image
+            src="#light-bulb"
+            position="0 0.746 -0.214"
+            rotation="90 0 0"
+            scale="0.25 0.3 1">
+          </a-image>
         </a-obj-model>
 
         <!-- lamp 02 -->
@@ -153,15 +165,31 @@
           position="-5.5 2.138 0.1"
           material=""
           rotation="0 180 0"
-          scale="0.6 1 0.6">
+          scale="0.6 1 0.6"
+          shadow="receive: true">
           <a-entity
-            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot"
+            light="penumbra:0.47;angle:80;groundColor:#fbfbfb;color:#fff987;type:spot; castShadow:true;"
             rotation="-55 0 0"
             position="-0.355 0.596 0.117">
           </a-entity>
+           <a-image
+            src="#light-bulb"
+            position="0 0.746 -0.214"
+            rotation="90 0 0"
+            scale="0.25 0.3 1">
+          </a-image>
         </a-obj-model>
 
-        <a-obj-model src="#bench-obj" mtl="#bench-mtl" position="0 0.323 0" rotation="0 90 0" material=""></a-obj-model>
+        <!-- street bench -->
+        <a-obj-model
+          src="#bench-obj"
+          mtl="#bench-mtl"
+          position="0 0.323 0"
+          rotation="0 90 0"
+          material=""
+          shadow="receive: true">
+
+        </a-obj-model>
       </a-entity>
 
       <a-sky color="#222"></a-sky>
